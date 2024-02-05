@@ -380,6 +380,7 @@ export interface ApiAdvantageAdvantage extends Schema.CollectionType {
     review: Attribute.Component<'ui.reviews', true>;
     titleUrl: Attribute.String;
     dynamicUrl: Attribute.UID<'api::advantage.advantage', 'titleUrl'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
