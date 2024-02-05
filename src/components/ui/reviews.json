@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_ui_reviews",
+  "info": {
+    "displayName": "Reviews",
+    "icon": "discuss",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

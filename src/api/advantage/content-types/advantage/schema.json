@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advantages",
+  "info": {
+    "singularName": "advantage",
+    "pluralName": "advantages",
+    "displayName": "Переваги",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "blocks"
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "review": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.reviews"
+    },
+    "titleUrl": {
+      "type": "string"
+    },
+    "dynamicUrl": {
+      "type": "uid",
+      "targetField": "titleUrl"
+    }
+  }
+}

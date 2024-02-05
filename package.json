@@ -1,0 +1,37 @@
+{
+  "name": "strapi-plugins",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@exfabrica/strapi-plugin-awesome-seo": "^1.0.0-beta.1.2",
+    "@strapi/plugin-cloud": "4.19.1",
+    "@strapi/plugin-color-picker": "^4.19.1",
+    "@strapi/plugin-i18n": "4.19.1",
+    "@strapi/plugin-seo": "^1.9.8",
+    "@strapi/plugin-users-permissions": "4.19.1",
+    "@strapi/strapi": "4.19.1",
+    "better-sqlite3": "8.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "6d652248-9d30-4568-a810-d31e9113b642"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

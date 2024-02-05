@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_main_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "border",
+        "no-border"
+      ]
+    }
+  }
+}
