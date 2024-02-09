@@ -1,9 +1,22 @@
 'use strict';
 
 /**
- * new controller
+ * new router
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::new.new');
+// @ts-ignore
+module.exports = createCoreRouter('api::new.new', ({ strapi }) => ({
+
+  async customAction (ctx) {
+        try {
+          
+          ctx.body = 'Hello World'
+
+        } catch (error) {
+          ctx.body = error
+        }
+  }
+
+}));

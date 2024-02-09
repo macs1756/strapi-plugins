@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * new router
+ * advantage router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
