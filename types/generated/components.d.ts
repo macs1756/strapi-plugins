@@ -80,6 +80,17 @@ export interface UiReviews extends Schema.Component {
   };
 }
 
+export interface UiTest extends Schema.Component {
+  collectionName: 'components_ui_tests';
+  info: {
+    displayName: 'test';
+    icon: 'check';
+  };
+  attributes: {
+    test: Attribute.RichText;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -87,6 +98,7 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'ui.button': UiButton;
       'ui.reviews': UiReviews;
+      'ui.test': UiTest;
     }
   }
 }

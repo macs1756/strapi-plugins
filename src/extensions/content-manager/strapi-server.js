@@ -1,13 +1,18 @@
-
 module.exports = (plugin) => {
-    const controller = plugin.controllers['collection-types'];
+    
+    let originalPublish = plugin.controllers['collection-types'].publish;
 
-    // Save the original create controller action
-    controller.strapiCreate = controller.create;
-
-    // extend action create
-    controller.create = async (ctx) => {
-       console.log('WORKING...')
+    plugin.controllers['collection-types'].publish = async (ctx) => {
+        try {
+          
+            console.log(ctx) 
+            const result = await originalPublish(ctx);
+           
+            return result;
+        } catch (error) {
+            
+            throw error;
+        }
     };
 
     return plugin;
