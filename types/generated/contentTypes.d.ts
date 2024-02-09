@@ -399,29 +399,33 @@ export interface ApiAdvantageAdvantage extends Schema.CollectionType {
   };
 }
 
-export interface ApiNewNew extends Schema.CollectionType {
-  collectionName: 'news';
+export interface ApiProjectProject extends Schema.CollectionType {
+  collectionName: 'projects';
   info: {
-    singularName: 'new';
-    pluralName: 'news';
-    displayName: '\u041D\u043E\u0432\u0438\u043D\u0438';
-    description: '';
+    singularName: 'project';
+    pluralName: 'projects';
+    displayName: '\u041F\u0440\u043E\u0435\u043A\u0442\u0438';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.String;
-    isModerated: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -1048,7 +1052,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::advantage.advantage': ApiAdvantageAdvantage;
-      'api::new.new': ApiNewNew;
+      'api::project.project': ApiProjectProject;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
