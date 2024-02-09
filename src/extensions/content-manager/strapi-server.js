@@ -1,6 +1,6 @@
 module.exports = (plugin) => {
 
-    console.log(plugin.policies.hasPermissions.validator);
+    //console.log(plugin.policies.hasPermissions.validator);
     return plugin
 
 };
