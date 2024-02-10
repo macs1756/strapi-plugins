@@ -406,6 +406,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: '\u041F\u0440\u043E\u0435\u043A\u0442\u0438';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -413,6 +414,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
+    test: Attribute.Component<'ui.button', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

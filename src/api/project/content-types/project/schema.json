@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Проекти"
+    "displayName": "Проекти",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,11 @@
     "description": {
       "type": "string",
       "required": true
+    },
+    "test": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.button"
     }
   }
 }
