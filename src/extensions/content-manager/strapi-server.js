@@ -1,3 +1,4 @@
+
 module.exports = (plugin) => {
 
 
@@ -16,7 +17,6 @@ module.exports = (plugin) => {
             throw error;
         }
     };
-
 
     return plugin;
 };
