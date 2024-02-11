@@ -1,3 +1,6 @@
+import TweetButton from '../extensions/components/TweetButton'
+
+
 const config = {
   locales: [
     // 'ar',
@@ -30,7 +33,11 @@ const config = {
 };
 
 const bootstrap = (app) => {
-  console.log(app);
+  console.log('app Admin', app);
+    app.injectContentManagerComponent('editView', 'right-links', {
+      name: 'TweetButton',
+      Component: TweetButton,
+    });
 };
 
 export default {
