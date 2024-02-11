@@ -18,7 +18,10 @@
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "customFieldConfig": {
+        "fieldRenderer": "my_custom_field_renderer"
+      }
     },
     "test": {
       "type": "component",
