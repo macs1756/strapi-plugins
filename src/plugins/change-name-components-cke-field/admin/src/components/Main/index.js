@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function Index() {
 
-  const { modifiedData, layout, onChange, updateActionAllowedFields, onPublish, onPublishPromptDismissal, onUnpublish, formErrors } = useCMEditViewDataManager();
+  const { modifiedData } = useCMEditViewDataManager();
 
   useEffect(()=> {
       console.log(modifiedData);
