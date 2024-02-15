@@ -8,5 +8,9 @@ module.exports = {
     enabled: true,
     resolve: './src/plugins/custom-valition-errors'
   },
+  'change-name-components-cke-field': {
+    enabled: true,
+    resolve: './src/plugins/change-name-components-cke-field'
+  },
   // ...
 }

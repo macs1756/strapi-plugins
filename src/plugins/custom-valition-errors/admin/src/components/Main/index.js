@@ -8,7 +8,7 @@ function Main() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSingleComponent, setIsSingleComponent] = useState(false)
 
-  const { modifiedData, layout, onChange, updateActionAllowedFields, onPublish, onPublishPromptDismissal, onUnpublish, formErrors } = useCMEditViewDataManager();
+  const { formErrors } = useCMEditViewDataManager();
 
   useEffect(() => {
     if (Object.keys(formErrors).length !== 0) {
