@@ -415,6 +415,13 @@ export interface ApiProjectProject extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
     test: Attribute.Component<'ui.button', true>;
+    secondDescription: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 10;
+        maxLength: 30;
+      }>;
+    reviews: Attribute.Component<'ui.reviews', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

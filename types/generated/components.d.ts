@@ -74,8 +74,8 @@ export interface UiReviews extends Schema.Component {
     description: '';
   };
   attributes: {
-    username: Attribute.String;
-    body: Attribute.String;
+    username: Attribute.String & Attribute.Required;
+    body: Attribute.String & Attribute.Required;
     avatar: Attribute.Media;
   };
 }

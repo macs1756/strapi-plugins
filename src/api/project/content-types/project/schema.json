@@ -27,6 +27,18 @@
       "type": "component",
       "repeatable": true,
       "component": "ui.button"
+    },
+    "secondDescription": {
+      "type": "text",
+      "required": true,
+      "minLength": 10,
+      "unique": false,
+      "maxLength": 30
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.reviews"
     }
   }
 }

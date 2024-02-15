@@ -8,10 +8,12 @@
   "options": {},
   "attributes": {
     "username": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "body": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "avatar": {
       "type": "media",

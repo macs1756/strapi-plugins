@@ -18,33 +18,11 @@ export default {
   },
 
   bootstrap(app) {
-    app.injectContentManagerComponent('editView', 'right-links', {
+    app.injectContentManagerComponent('editView', 'informations', {
       name: 'Index',
       Component: Index,
     });
   },
 
-
-  async registerTrads({ locales }) {
-    const importedTrads = await Promise.all(
-      locales.map((locale) => {
-        // @ts-ignore
-        return import(`./translations/${locale}.json`)
-          .then(({ default: data }) => {
-            return {
-              data: prefixPluginTranslations(data, pluginId),
-              locale,
-            };
-          })
-          .catch(() => {
-            return {
-              data: {},
-              locale,
-            };
-          });
-      })
-    );
-
-    return Promise.resolve(importedTrads);
-  },
+  
 };
