@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ui_ck_etests",
+  "info": {
+    "displayName": "CKEtest",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

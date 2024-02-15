@@ -422,6 +422,8 @@ export interface ApiProjectProject extends Schema.CollectionType {
         maxLength: 30;
       }>;
     reviews: Attribute.Component<'ui.reviews', true>;
+    CKESection: Attribute.Component<'ui.test', true>;
+    CKESectionV2: Attribute.Component<'ui.ck-etest', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

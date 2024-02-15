@@ -39,6 +39,16 @@
       "type": "component",
       "repeatable": true,
       "component": "ui.reviews"
+    },
+    "CKESection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.test"
+    },
+    "CKESectionV2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.ck-etest"
     }
   }
 }

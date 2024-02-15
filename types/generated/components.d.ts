@@ -66,6 +66,17 @@ export interface UiButton extends Schema.Component {
   };
 }
 
+export interface UiCkEtest extends Schema.Component {
+  collectionName: 'components_ui_ck_etests';
+  info: {
+    displayName: 'CKEtest';
+    icon: 'cube';
+  };
+  attributes: {
+    text: Attribute.RichText;
+  };
+}
+
 export interface UiReviews extends Schema.Component {
   collectionName: 'components_ui_reviews';
   info: {
@@ -85,9 +96,11 @@ export interface UiTest extends Schema.Component {
   info: {
     displayName: 'test';
     icon: 'check';
+    description: '';
   };
   attributes: {
     test: Attribute.RichText;
+    text: Attribute.String;
   };
 }
 
@@ -97,6 +110,7 @@ declare module '@strapi/types' {
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'ui.button': UiButton;
+      'ui.ck-etest': UiCkEtest;
       'ui.reviews': UiReviews;
       'ui.test': UiTest;
     }

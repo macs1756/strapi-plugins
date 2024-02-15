@@ -2,12 +2,16 @@
   "collectionName": "components_ui_tests",
   "info": {
     "displayName": "test",
-    "icon": "check"
+    "icon": "check",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "test": {
       "type": "richtext"
+    },
+    "text": {
+      "type": "string"
     }
   }
 }
