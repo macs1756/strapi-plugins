@@ -5,12 +5,12 @@ function Index() {
   const { modifiedData, updateActionAllowedFields, onChange } = useCMEditViewDataManager();
   const [keys, setKeys] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     setKeys(updateActionAllowedFields)
-  },[updateActionAllowedFields])
+  }, [updateActionAllowedFields])
 
 
- 
+
 
   useEffect(() => {
 
@@ -19,40 +19,42 @@ function Index() {
 
 
     console.log(modifiedData?.test[0]?.text);
-    // onChange({
+
+
+    // modifiedData?.test[0]?.text && onChange({
     //   target: {
-    //     name: modifiedData?.test[0]?.text,
+    //     name: 'test.text',
     //     value: 'nothing',
     //     type: 'string',
     //   },
     // });
 
-   // keys.forEach(key => {
+    // keys.forEach(key => {
 
-      // if(key.includes('.')){
-      //   const keyParts = key.split('.')
-      //   const keyKavueArray = modifiedData?.[keyParts[1]]
+    // if(key.includes('.')){
+    //   const keyParts = key.split('.')
+    //   const keyKavueArray = modifiedData?.[keyParts[1]]
 
-      //   //console.log(modifiedData.test[0].text);
+    //   //console.log(modifiedData.test[0].text);
 
-      //   if(Array.isArray(keyKavueArray)){
-      //     keyKavueArray.forEach(componentElement => {
+    //   if(Array.isArray(keyKavueArray)){
+    //     keyKavueArray.forEach(componentElement => {
 
-      //       const keyKavue = componentElement.text
+    //       const keyKavue = componentElement.text
 
-      //       console.log(keyKavue);
+    //       console.log(keyKavue);
 
-      //         if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
-      //           onChange({
-      //             target: {
-      //               name: modifiedData?.test[0]?.text,
-      //               value: 'nothing',
-      //               type: 'string',
-      //             },
-      //           });
-      //         }
-      //     });
-      //   }
+    //         if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
+    //           onChange({
+    //             target: {
+    //               name: modifiedData?.test[0]?.text,
+    //               value: 'nothing',
+    //               type: 'string',
+    //             },
+    //           });
+    //         }
+    //     });
+    //   }
 
 
     //   }else{
@@ -67,7 +69,7 @@ function Index() {
     //       });
     //     }
     //   }
-    
+
 
 
     // })
