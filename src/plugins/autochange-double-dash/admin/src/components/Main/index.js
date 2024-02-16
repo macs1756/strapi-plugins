@@ -9,55 +9,68 @@ function Index() {
     setKeys(updateActionAllowedFields)
   },[updateActionAllowedFields])
 
+
+ 
+
   useEffect(() => {
 
     //console.log(keys);
     //console.log(modifiedData);
 
-    keys.forEach(key => {
 
-      if(key.includes('.')){
-        const keyParts = key.split('.')
-        const keyKavueArray = modifiedData?.[keyParts[1]]
+    console.log(modifiedData?.test[0]?.text);
+    // onChange({
+    //   target: {
+    //     name: modifiedData?.test[0]?.text,
+    //     value: 'nothing',
+    //     type: 'string',
+    //   },
+    // });
 
-        console.log(keyParts);
+   // keys.forEach(key => {
 
-        if(Array.isArray(keyKavueArray)){
-          keyKavueArray.forEach(componentElement => {
+      // if(key.includes('.')){
+      //   const keyParts = key.split('.')
+      //   const keyKavueArray = modifiedData?.[keyParts[1]]
 
-            const keyKavue = componentElement.text
+      //   //console.log(modifiedData.test[0].text);
 
-           
+      //   if(Array.isArray(keyKavueArray)){
+      //     keyKavueArray.forEach(componentElement => {
 
-              if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
-                onChange({
-                  target: {
-                    name: key,
-                    value: keyKavue.replace('--', '—'),
-                    type: 'string',
-                  },
-                });
-              }
-          });
-        }
+      //       const keyKavue = componentElement.text
+
+      //       console.log(keyKavue);
+
+      //         if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
+      //           onChange({
+      //             target: {
+      //               name: modifiedData?.test[0]?.text,
+      //               value: 'nothing',
+      //               type: 'string',
+      //             },
+      //           });
+      //         }
+      //     });
+      //   }
 
 
-      }else{
-        const keyKavue = modifiedData?.[key]
-        if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
-          onChange({
-            target: {
-              name: key,
-              value: keyKavue.replace('--', '—'),
-              type: 'string',
-            },
-          });
-        }
-      }
+    //   }else{
+    //     const keyKavue = modifiedData?.[key]
+    //     if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
+    //       onChange({
+    //         target: {
+    //           name: key,
+    //           value: keyKavue.replace('--', '—'),
+    //           type: 'string',
+    //         },
+    //       });
+    //     }
+    //   }
     
 
 
-    })
+    // })
   }, [modifiedData])
 
   return (null);
