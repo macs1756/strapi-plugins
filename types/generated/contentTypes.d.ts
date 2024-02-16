@@ -424,6 +424,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     reviews: Attribute.Component<'ui.reviews', true>;
     CKESection: Attribute.Component<'ui.test', true>;
     CKESectionV2: Attribute.Component<'ui.ck-etest', true>;
+    slug: Attribute.UID<'api::project.project', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -435,6 +436,42 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTestSlugGenerateTestSlugGenerate
+  extends Schema.CollectionType {
+  collectionName: 'test_slug_generates';
+  info: {
+    singularName: 'test-slug-generate';
+    pluralName: 'test-slug-generates';
+    displayName: 'TestSlugGenerate';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    slug: Attribute.UID<'api::test-slug-generate.test-slug-generate', 'title'>;
+    AffiliateSlug: Attribute.UID<
+      'api::test-slug-generate.test-slug-generate',
+      'title'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::test-slug-generate.test-slug-generate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::test-slug-generate.test-slug-generate',
       'oneToOne',
       'admin::user'
     > &
@@ -1065,6 +1102,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::advantage.advantage': ApiAdvantageAdvantage;
       'api::project.project': ApiProjectProject;
+      'api::test-slug-generate.test-slug-generate': ApiTestSlugGenerateTestSlugGenerate;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_slug_generates",
+  "info": {
+    "singularName": "test-slug-generate",
+    "pluralName": "test-slug-generates",
+    "displayName": "TestSlugGenerate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "AffiliateSlug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
