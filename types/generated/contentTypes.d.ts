@@ -382,6 +382,7 @@ export interface ApiAdvantageAdvantage extends Schema.CollectionType {
     dynamicUrl: Attribute.UID<'api::advantage.advantage', 'titleUrl'>;
     seo: Attribute.Component<'shared.seo'>;
     test: Attribute.Component<'ui.test', true>;
+    test2: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -451,13 +452,15 @@ export interface ApiTestSlugGenerateTestSlugGenerate
     singularName: 'test-slug-generate';
     pluralName: 'test-slug-generates';
     displayName: 'TestSlugGenerate';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    slug: Attribute.UID<'api::test-slug-generate.test-slug-generate', 'title'>;
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::test-slug-generate.test-slug-generate', 'title'> &
+      Attribute.Required;
     AffiliateSlug: Attribute.UID<
       'api::test-slug-generate.test-slug-generate',
       'title'

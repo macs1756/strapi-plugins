@@ -21,8 +21,12 @@ function Index() {
     //console.log(keys);
     //console.log(modifiedData);
 
+    // const newData = {
+    //   ...modifiedData,
+    //   test: [modifiedData?.test]
+    // }
 
-    console.log(modifiedData?.test[0]?.text);
+    //console.log(modifiedData?.test[0]?.text);
 
 
     // modifiedData?.test[0]?.text && onChange({

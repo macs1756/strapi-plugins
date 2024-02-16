@@ -4,7 +4,8 @@
   "info": {
     "singularName": "test-slug-generate",
     "pluralName": "test-slug-generates",
-    "displayName": "TestSlugGenerate"
+    "displayName": "TestSlugGenerate",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,11 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "AffiliateSlug": {
       "type": "uid",
