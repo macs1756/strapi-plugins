@@ -12,5 +12,8 @@ module.exports = {
     enabled: true,
     resolve: './src/plugins/change-name-components-cke-field'
   },
-  // ...
+  'autochange-double-dash': {
+    enabled: true,
+    resolve: './src/plugins/autochange-double-dash'
+  },
 }

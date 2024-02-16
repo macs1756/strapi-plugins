@@ -49,11 +49,7 @@ const TweetButton = () => {
   };
 
   useEffect(() => {
-    console.log('modifiedData', modifiedData)
-    // modifiedData.forEach(item => {
-    //   console.log('item', item)
-    // })
-
+    
     keys.forEach(key => {
       const keyKavue = modifiedData?.[key]
       if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('-- ')) {
