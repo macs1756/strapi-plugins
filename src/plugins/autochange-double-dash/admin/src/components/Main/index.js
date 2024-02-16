@@ -6,25 +6,57 @@ function Index() {
   const [keys, setKeys] = useState([])
 
   useEffect(()=>{
-    
+    setKeys(updateActionAllowedFields)
   },[updateActionAllowedFields])
 
   useEffect(() => {
 
-    console.log(keys);
+    //console.log(keys);
+    //console.log(modifiedData);
 
     keys.forEach(key => {
-      const keyKavue = modifiedData?.[key]
-      if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
 
-        onChange({
-          target: {
-            name: key,
-            value: keyKavue.replace('--', '—'),
-            type: 'string',
-          },
-        });
+      if(key.includes('.')){
+        const keyParts = key.split('.')
+        const keyKavueArray = modifiedData?.[keyParts[1]]
+
+        console.log(keyParts);
+
+        if(Array.isArray(keyKavueArray)){
+          keyKavueArray.forEach(componentElement => {
+
+            const keyKavue = componentElement.text
+
+           
+
+              if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
+                onChange({
+                  target: {
+                    name: key,
+                    value: keyKavue.replace('--', '—'),
+                    type: 'string',
+                  },
+                });
+              }
+          });
+        }
+
+
+      }else{
+        const keyKavue = modifiedData?.[key]
+        if (!!keyKavue && typeof keyKavue === 'string' && keyKavue.includes('--')) {
+          onChange({
+            target: {
+              name: key,
+              value: keyKavue.replace('--', '—'),
+              type: 'string',
+            },
+          });
+        }
       }
+    
+
+
     })
   }, [modifiedData])
 

@@ -425,6 +425,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     CKESection: Attribute.Component<'ui.test', true>;
     CKESectionV2: Attribute.Component<'ui.ck-etest', true>;
     slug: Attribute.UID<'api::project.project', 'title'>;
+    markdown: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
