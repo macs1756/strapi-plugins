@@ -2,7 +2,11 @@ import { useCMEditViewDataManager } from "@strapi/helper-plugin";
 import { useEffect, useState } from "react";
 
 function Index() {
-  const { modifiedData, updateActionAllowedFields, onChange } = useCMEditViewDataManager();
+
+  // updateActionAllowedFields
+
+  const { modifiedData,  onChange, updateActionAllowedFields } = useCMEditViewDataManager();
+
   const [keys, setKeys] = useState([])
 
   useEffect(() => {
