@@ -16,4 +16,8 @@ module.exports = {
     enabled: true,
     resolve: './src/plugins/autochange-double-dash'
   },
+  'input-slug-generate': {
+    enabled: true,
+    resolve: './src/plugins/input-slug-generate'
+  },
 }

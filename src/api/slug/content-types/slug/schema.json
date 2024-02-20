@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slugs",
+  "info": {
+    "singularName": "slug",
+    "pluralName": "slugs",
+    "displayName": "Slug"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "generateSlug": {
+      "type": "customField",
+      "customField": "plugin::dminput.text-ai"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
